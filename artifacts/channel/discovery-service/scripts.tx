@@ -1,0 +1,13 @@
+
+
+
+
+
+1) Peer membership query:
+    discover --configFile conf.yaml peers --channel oms  --server localhost:7051
+
+2) Configuration query
+    discover --configFile conf.yaml config --channel oms  --server localhost:7051
+
+3) Endorsers query
+    discover --configFile conf.yaml endorsers --channel oms  --server localhost:7051 --chaincode orphanage

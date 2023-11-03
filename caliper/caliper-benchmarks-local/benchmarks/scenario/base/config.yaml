@@ -1,0 +1,23 @@
+test:
+  workers:
+    type: local
+    number: 1
+  rounds:
+    - label: Create Car
+      txNumber: 1000
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 40
+      workload:
+        module: benchmarks/scenario/base/createCar.js
+
+    - label: Query Car
+      description: Test description for the query performance of the deployed contract.
+      txNumber: 1000
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 220
+      workload:
+        module: benchmarks/scenario/base/queryCar.js
