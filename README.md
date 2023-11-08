@@ -2,6 +2,37 @@
 
 Welcome to the BE_RESEARCH_HF repository! This is a research project repository for Hyperledger Fabric. Please take a moment to read this README to understand how to work with this project.
 
+## Prerequisites
+Before you start working with this project, make sure you have the following prerequisites in place:
+
+- **Hyperledger Fabric Bin Files**: You need to have the binary files of Hyperledger Fabric. You can refer to the official Hyperledger Fabric documentation for installation instructions. Here's the official link: [Hyperledger Fabric Documentation](https://hyperledger-fabric.readthedocs.io/en/latest/getting_started.html)
+
+    **YouTube Tutorials**:
+    - [Part 1 Installation](https://youtu.be/uOBMk3S7d10?si=OpLyt72sLzr-Zoox)
+    - [Part 2 Setup](https://youtu.be/rSBkmsnvipI?si=Tev-5PhxCol1pqSI)
+
+- **Setting PATH**: Make sure to set the path for the bin folder in your environment. You can do this by editing your `~/.bashrc` file.
+
+   Example:
+   ```sh
+   gedit ~/.bashrc
+   # or
+   nano ~/.bashrc
+
+## Network Start
+
+Before you start the network, make sure to follow all the steps mentioned in the prerequisites section and verify the version.
+
+To start and stop the network, you can use the following scripts:
+
+- **Start Network**: Run the script `./networkUp.sh` to start the network. This script will set up the necessary components for your Hyperledger Fabric network.
+
+- **Stop Network**: You can use the script `./networkDown.sh` to stop the network. This script will remove various components, including IDs and private keys, to clean up your environment.
+
+Please note that you may need to add the missing path to folders in the `./networkUp.sh` and `./networkDown.sh` scripts. Ensure that all the required paths and dependencies are correctly configured in these scripts before running them.
+
+By following these steps, you can efficiently manage your Hyperledger Fabric network and start or stop it as needed for your research or project.
+
 ## Branches
 
   **Important**: Do not push any changes to the master branch, as it is the foundation of the code.
@@ -15,7 +46,7 @@ Welcome to the BE_RESEARCH_HF repository! This is a research project repository 
   ```shell
   git clone -b master https://github.com/Nilesh0711/BE_RESEARCH_HF.git
   ```
-
+  
 ### Kafka, Raft, Solo Branches
 
 - Create separate branches for Kafka, Raft, and Solo configurations.
