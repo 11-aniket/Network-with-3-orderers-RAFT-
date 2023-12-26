@@ -1,6 +1,6 @@
 # BE_RESEARCH_HF - Hyperledger Fabric Research Repository
 
-Welcome to the BE_RESEARCH_HF repository! This is a research project repository for Hyperledger Fabric. Please take a moment to read this README to understand how to work with this project.
+Welcome to BE_RESEARCH_HF repository! This is a research project repository for Hyperledger Fabric. Please take a moment to read this README to understand how to work with this project.
 
 ## Prerequisites
 Before you start working with this project, make sure you have the following prerequisites in place:
