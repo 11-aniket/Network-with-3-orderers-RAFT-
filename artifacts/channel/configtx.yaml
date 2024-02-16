@@ -177,14 +177,14 @@ Profiles:
                   Port: 7050
                   ClientTLSCert: crypto-config/ordererOrganizations/example.com/orderers/orderer.example.com/tls/server.crt
                   ServerTLSCert: crypto-config/ordererOrganizations/example.com/orderers/orderer.example.com/tls/server.crt
-                # - Host: orderer.example2.com
-                #   Port: 8050
-                #   ClientTLSCert: crypto-config/ordererOrganizations/example.com/orderers/orderer.example2.com/tls/server.crt
-                #   ServerTLSCert: crypto-config/ordererOrganizations/example.com/orderers/orderer.example2.com/tls/server.crt
-                # - Host: orderer.example3.com
-                #   Port: 9050
-                #   ClientTLSCert: crypto-config/ordererOrganizations/example.com/orderers/orderer.example3.com/tls/server.crt
-                #   ServerTLSCert: crypto-config/ordererOrganizations/example.com/orderers/orderer.example3.com/tls/server.crt
+                - Host: orderer2.example.com
+                  Port: 8050
+                  ClientTLSCert: crypto-config/ordererOrganizations/example.com/orderers/orderer2.example.com/tls/server.crt
+                  ServerTLSCert: crypto-config/ordererOrganizations/example.com/orderers/orderer2.example.com/tls/server.crt
+                - Host: orderer3.example.com
+                  Port: 9050
+                  ClientTLSCert: crypto-config/ordererOrganizations/example.com/orderers/orderer3.example.com/tls/server.crt
+                  ServerTLSCert: crypto-config/ordererOrganizations/example.com/orderers/orderer3.example.com/tls/server.crt
                 # - Host: orderer.example4.com
                 #   Port: 10050
                 #   ClientTLSCert: crypto-config/ordererOrganizations/example.com/orderers/orderer.example4.com/tls/server.crt
@@ -197,8 +197,8 @@ Profiles:
     
             Addresses:
                 - orderer.example.com:7050
-                # - orderer.example2.com:8050
-                # - orderer.example3.com:9050
+                - orderer2.example.com:8050
+                - orderer3.example.com:9050
                 # - orderer.example3.com:10050
                 # - orderer.example3.com:11050
 

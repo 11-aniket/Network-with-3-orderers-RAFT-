@@ -128,7 +128,7 @@
                 <li>DLT: &nbsp<span style="font-weight: 500;">fabric</span></li>
                 <li>Name: &nbsp<span style="font-weight: 500;"></span></li>
                 <li>Description: &nbsp<span style="font-weight: 500;"></span></li>
-                <li>Benchmark Rounds: &nbsp<span style="font-weight: 500;">2</span></li>
+                <li>Benchmark Rounds: &nbsp<span style="font-weight: 500;">5</span></li>
                 <li><a href="#benchmarkInfo">Details</a></li>
             </ul>
             <ul>
@@ -136,6 +136,9 @@
                 <li><a href="#benchmarksummary">Summary</a></li>
                     <li><a href="#Create Car">Create Car</a></li>
                     <li><a href="#Query Car">Query Car</a></li>
+                    <li><a href="#Update Car">Update Car</a></li>
+                    <li><a href="#Transfer Car">Transfer Car</a></li>
+                    <li><a href="#Delete Car">Delete Car</a></li>
             </ul>
             <ul>
                 <h3>&nbspSystem under test</h3>
@@ -158,10 +161,19 @@
                     </tr>
 
                     <tr>
-                         <td>Create Car</td> <td>972</td> <td>28</td> <td>40.0</td> <td>0.12</td> <td>0.03</td> <td>0.05</td> <td>40.0</td>
+                         <td>Create Car</td> <td>161</td> <td>39</td> <td>40.2</td> <td>6.68</td> <td>0.19</td> <td>3.29</td> <td>17.2</td>
                     </tr>
                     <tr>
-                         <td>Query Car</td> <td>972</td> <td>28</td> <td>220.2</td> <td>0.03</td> <td>0.01</td> <td>0.01</td> <td>219.8</td>
+                         <td>Query Car</td> <td>254</td> <td>46</td> <td>50.2</td> <td>0.04</td> <td>0.01</td> <td>0.02</td> <td>50.1</td>
+                    </tr>
+                    <tr>
+                         <td>Update Car</td> <td>160</td> <td>40</td> <td>87.5</td> <td>4.67</td> <td>0.15</td> <td>2.87</td> <td>32.0</td>
+                    </tr>
+                    <tr>
+                         <td>Transfer Car</td> <td>538</td> <td>62</td> <td>140.9</td> <td>22.31</td> <td>0.28</td> <td>10.50</td> <td>25.7</td>
+                    </tr>
+                    <tr>
+                         <td>Delete Car</td> <td>911</td> <td>89</td> <td>98.8</td> <td>29.78</td> <td>0.21</td> <td>13.37</td> <td>27.7</td>
                     </tr>
                 </table>
             </div>
@@ -179,7 +191,7 @@
                                      <th>Name</th> <th>Succ</th> <th>Fail</th> <th>Send Rate (TPS)</th> <th>Max Latency (s)</th> <th>Min Latency (s)</th> <th>Avg Latency (s)</th> <th>Throughput (TPS)</th>
                                 </tr>
                                 <tr>
-                                     <td>Create Car</td> <td>972</td> <td>28</td> <td>40.0</td> <td>0.12</td> <td>0.03</td> <td>0.05</td> <td>40.0</td>
+                                     <td>Create Car</td> <td>161</td> <td>39</td> <td>40.2</td> <td>6.68</td> <td>0.19</td> <td>3.29</td> <td>17.2</td>
                                 </tr>
                             </table>
                         <h3>Resource utilization for Create Car</h3>
@@ -187,11 +199,11 @@
 
             <div style="border-bottom: 1px solid #d9d9d9; padding-bottom: 10px;" id="Query Car">
                 <h2>Benchmark round: Query Car</h2>
-                <p>Test description for the query performance of the deployed contract.</p>
+                <p></p>
                 <pre style="overflow: visible;white-space: pre-wrap;max-height:100%;">rateControl:
   type: fixed-rate
   opts:
-    tps: 220
+    tps: 50
 </pre>
                         <h3>Performance metrics for Query Car</h3>
                             <table style="min-width: 100%;">
@@ -199,10 +211,70 @@
                                      <th>Name</th> <th>Succ</th> <th>Fail</th> <th>Send Rate (TPS)</th> <th>Max Latency (s)</th> <th>Min Latency (s)</th> <th>Avg Latency (s)</th> <th>Throughput (TPS)</th>
                                 </tr>
                                 <tr>
-                                     <td>Query Car</td> <td>972</td> <td>28</td> <td>220.2</td> <td>0.03</td> <td>0.01</td> <td>0.01</td> <td>219.8</td>
+                                     <td>Query Car</td> <td>254</td> <td>46</td> <td>50.2</td> <td>0.04</td> <td>0.01</td> <td>0.02</td> <td>50.1</td>
                                 </tr>
                             </table>
                         <h3>Resource utilization for Query Car</h3>
+            </div>
+
+            <div style="border-bottom: 1px solid #d9d9d9; padding-bottom: 10px;" id="Update Car">
+                <h2>Benchmark round: Update Car</h2>
+                <p></p>
+                <pre style="overflow: visible;white-space: pre-wrap;max-height:100%;">rateControl:
+  type: fixed-rate
+  opts:
+    tps: 100
+</pre>
+                        <h3>Performance metrics for Update Car</h3>
+                            <table style="min-width: 100%;">
+                                <tr>
+                                     <th>Name</th> <th>Succ</th> <th>Fail</th> <th>Send Rate (TPS)</th> <th>Max Latency (s)</th> <th>Min Latency (s)</th> <th>Avg Latency (s)</th> <th>Throughput (TPS)</th>
+                                </tr>
+                                <tr>
+                                     <td>Update Car</td> <td>160</td> <td>40</td> <td>87.5</td> <td>4.67</td> <td>0.15</td> <td>2.87</td> <td>32.0</td>
+                                </tr>
+                            </table>
+                        <h3>Resource utilization for Update Car</h3>
+            </div>
+
+            <div style="border-bottom: 1px solid #d9d9d9; padding-bottom: 10px;" id="Transfer Car">
+                <h2>Benchmark round: Transfer Car</h2>
+                <p></p>
+                <pre style="overflow: visible;white-space: pre-wrap;max-height:100%;">rateControl:
+  type: fixed-rate
+  opts:
+    tps: 150
+</pre>
+                        <h3>Performance metrics for Transfer Car</h3>
+                            <table style="min-width: 100%;">
+                                <tr>
+                                     <th>Name</th> <th>Succ</th> <th>Fail</th> <th>Send Rate (TPS)</th> <th>Max Latency (s)</th> <th>Min Latency (s)</th> <th>Avg Latency (s)</th> <th>Throughput (TPS)</th>
+                                </tr>
+                                <tr>
+                                     <td>Transfer Car</td> <td>538</td> <td>62</td> <td>140.9</td> <td>22.31</td> <td>0.28</td> <td>10.50</td> <td>25.7</td>
+                                </tr>
+                            </table>
+                        <h3>Resource utilization for Transfer Car</h3>
+            </div>
+
+            <div style="border-bottom: 1px solid #d9d9d9; padding-bottom: 10px;" id="Delete Car">
+                <h2>Benchmark round: Delete Car</h2>
+                <p></p>
+                <pre style="overflow: visible;white-space: pre-wrap;max-height:100%;">rateControl:
+  type: fixed-rate
+  opts:
+    tps: 100
+</pre>
+                        <h3>Performance metrics for Delete Car</h3>
+                            <table style="min-width: 100%;">
+                                <tr>
+                                     <th>Name</th> <th>Succ</th> <th>Fail</th> <th>Send Rate (TPS)</th> <th>Max Latency (s)</th> <th>Min Latency (s)</th> <th>Avg Latency (s)</th> <th>Throughput (TPS)</th>
+                                </tr>
+                                <tr>
+                                     <td>Delete Car</td> <td>911</td> <td>89</td> <td>98.8</td> <td>29.78</td> <td>0.21</td> <td>13.37</td> <td>27.7</td>
+                                </tr>
+                            </table>
+                        <h3>Resource utilization for Delete Car</h3>
             </div>
 
             <div style="border-bottom: 1px solid #d9d9d9; padding-bottom: 10px;">
@@ -213,22 +285,45 @@
   number: 1
 rounds:
   - label: Create Car
-    txNumber: 1000
+    txNumber: 200
     rateControl:
       type: fixed-rate
       opts:
         tps: 40
     workload:
-      module: benchmarks&#x2F;scenario&#x2F;simple&#x2F;pavan-v2.2&#x2F;createCar.js
+      module: benchmarks&#x2F;scenario&#x2F;base&#x2F;createCar.js
   - label: Query Car
-    description: Test description for the query performance of the deployed contract.
+    txNumber: 300
+    rateControl:
+      type: fixed-rate
+      opts:
+        tps: 50
+    workload:
+      module: benchmarks&#x2F;scenario&#x2F;base&#x2F;queryCar.js
+  - label: Update Car
+    txNumber: 200
+    rateControl:
+      type: fixed-rate
+      opts:
+        tps: 100
+    workload:
+      module: benchmarks&#x2F;scenario&#x2F;base&#x2F;update.js
+  - label: Transfer Car
+    txNumber: 600
+    rateControl:
+      type: fixed-rate
+      opts:
+        tps: 150
+    workload:
+      module: benchmarks&#x2F;scenario&#x2F;base&#x2F;transfer.js
+  - label: Delete Car
     txNumber: 1000
     rateControl:
       type: fixed-rate
       opts:
-        tps: 220
+        tps: 100
     workload:
-      module: benchmarks&#x2F;scenario&#x2F;simple&#x2F;pavan-v2.2&#x2F;queryCar.js
+      module: benchmarks&#x2F;scenario&#x2F;base&#x2F;delete.js
 </pre>
                 <h3>SUT</h3>
                 <pre id="sutdetails">not provided</pre>
