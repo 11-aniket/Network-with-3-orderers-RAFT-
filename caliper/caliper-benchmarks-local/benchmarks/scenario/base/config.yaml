@@ -13,11 +13,11 @@ test:
         module: benchmarks/scenario/base/createCar.js
 
     - label: Query Car
-      txNumber: 300
+      txNumber: 200
       rateControl:
         type: fixed-rate
         opts:
-          tps: 50
+          tps: 40
       workload:
         module: benchmarks/scenario/base/queryCar.js
       
@@ -26,26 +26,26 @@ test:
       rateControl:
         type: fixed-rate
         opts:
-          tps: 100
+          tps: 40
       workload:
         module: benchmarks/scenario/base/update.js
 
 
     - label: Transfer Car
-      txNumber: 600
+      txNumber: 200
       rateControl:
         type: fixed-rate
         opts:
-          tps: 150
+          tps: 40
       workload:
         module: benchmarks/scenario/base/transfer.js
 
     - label: Delete Car
-      txNumber: 1000
+      txNumber: 200
       rateControl:
         type: fixed-rate
         opts:
-          tps: 100
+          tps: 40
       workload:
         module: benchmarks/scenario/base/delete.js
 

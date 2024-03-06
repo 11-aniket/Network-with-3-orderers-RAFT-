@@ -22,6 +22,59 @@ OrdererOrgs:
         SANS:
             - "localhost"
             - "127.0.0.1"
+      - Hostname: orderer4
+        SANS:
+            - "localhost"
+            - "127.0.0.1"
+      - Hostname: orderer5
+        SANS:
+            - "localhost"
+            - "127.0.0.1"
+      - Hostname: orderer6
+        SANS:
+            - "localhost"
+            - "127.0.0.1"
+      - Hostname: orderer7
+        SANS:
+            - "localhost"
+            - "127.0.0.1"
+      - Hostname: orderer8
+        SANS:
+            - "localhost"
+            - "127.0.0.1"
+      - Hostname: orderer9
+        SANS:
+            - "localhost"
+            - "127.0.0.1"
+      - Hostname: orderer10
+        SANS:
+            - "localhost"
+            - "127.0.0.1"
+      - Hostname: orderer11
+        SANS:
+            - "localhost"
+            - "127.0.0.1"
+      - Hostname: orderer12
+        SANS:
+            - "localhost"
+            - "127.0.0.1"
+      - Hostname: orderer13
+        SANS:
+            - "localhost"
+            - "127.0.0.1"
+      - Hostname: orderer14
+        SANS:
+            - "localhost"
+            - "127.0.0.1"
+      - Hostname: orderer15
+        SANS:
+            - "localhost"
+            - "127.0.0.1"
+      - Hostname: orderer5
+        SANS:
+            - "localhost"
+            - "127.0.0.1"
+
 
 # ---------------------------------------------------------------------------
 # "PeerOrgs" - Definition of organizations managing peer nodes

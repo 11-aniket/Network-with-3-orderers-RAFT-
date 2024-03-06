@@ -37,6 +37,9 @@ echo
 ./create-artifacts.sh
 cd ../
 sleep 2
+echo "**************************************************************"
+echo "creating docker containers"
+echo "**************************************************************"
 docker-compose up -d
 cd ../
 sleep 5
