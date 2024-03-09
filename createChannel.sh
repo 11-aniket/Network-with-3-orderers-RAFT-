@@ -20,12 +20,75 @@ setGlobalsForPeer0Org1(){
     export CORE_PEER_ADDRESS=localhost:7051
 }
 
+setGlobalsForPeer1Org1(){
+    export CORE_PEER_LOCALMSPID="Org1MSP"
+    export CORE_PEER_TLS_ROOTCERT_FILE=$PEER0_ORG1_CA
+    export CORE_PEER_MSPCONFIGPATH=${PWD}/artifacts/channel/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp
+    export CORE_PEER_ADDRESS=localhost:7061
+    
+}
+
+setGlobalsForPeer2Org1(){
+    export CORE_PEER_LOCALMSPID="Org1MSP"
+    export CORE_PEER_TLS_ROOTCERT_FILE=$PEER0_ORG1_CA
+    export CORE_PEER_MSPCONFIGPATH=${PWD}/artifacts/channel/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp
+    export CORE_PEER_ADDRESS=localhost:7071
+    
+}
+
+setGlobalsForPeer3Org1(){
+    export CORE_PEER_LOCALMSPID="Org1MSP"
+    export CORE_PEER_TLS_ROOTCERT_FILE=$PEER0_ORG1_CA
+    export CORE_PEER_MSPCONFIGPATH=${PWD}/artifacts/channel/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp
+    export CORE_PEER_ADDRESS=localhost:7081
+    
+}
+
+setGlobalsForPeer4Org1(){
+    export CORE_PEER_LOCALMSPID="Org1MSP"
+    export CORE_PEER_TLS_ROOTCERT_FILE=$PEER0_ORG1_CA
+    export CORE_PEER_MSPCONFIGPATH=${PWD}/artifacts/channel/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp
+    export CORE_PEER_ADDRESS=localhost:7091
+    
+}
 
 setGlobalsForPeer0Org2(){
     export CORE_PEER_LOCALMSPID="Org2MSP"
     export CORE_PEER_TLS_ROOTCERT_FILE=$PEER0_ORG2_CA
     export CORE_PEER_MSPCONFIGPATH=${PWD}/artifacts/channel/crypto-config/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp
     export CORE_PEER_ADDRESS=localhost:9051
+    
+}
+
+setGlobalsForPeer1Org2(){
+    export CORE_PEER_LOCALMSPID="Org2MSP"
+    export CORE_PEER_TLS_ROOTCERT_FILE=$PEER0_ORG2_CA
+    export CORE_PEER_MSPCONFIGPATH=${PWD}/artifacts/channel/crypto-config/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp
+    export CORE_PEER_ADDRESS=localhost:9061
+    
+}
+
+setGlobalsForPeer2Org2(){
+    export CORE_PEER_LOCALMSPID="Org2MSP"
+    export CORE_PEER_TLS_ROOTCERT_FILE=$PEER0_ORG2_CA
+    export CORE_PEER_MSPCONFIGPATH=${PWD}/artifacts/channel/crypto-config/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp
+    export CORE_PEER_ADDRESS=localhost:9071
+    
+}
+
+setGlobalsForPeer3Org2(){
+    export CORE_PEER_LOCALMSPID="Org2MSP"
+    export CORE_PEER_TLS_ROOTCERT_FILE=$PEER0_ORG2_CA
+    export CORE_PEER_MSPCONFIGPATH=${PWD}/artifacts/channel/crypto-config/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp
+    export CORE_PEER_ADDRESS=localhost:9081
+    
+}
+
+setGlobalsForPeer4Org2(){
+    export CORE_PEER_LOCALMSPID="Org2MSP"
+    export CORE_PEER_TLS_ROOTCERT_FILE=$PEER0_ORG2_CA
+    export CORE_PEER_MSPCONFIGPATH=${PWD}/artifacts/channel/crypto-config/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp
+    export CORE_PEER_ADDRESS=localhost:9091
     
 }
 
@@ -37,14 +100,40 @@ createChannel(){
     --ordererTLSHostnameOverride orderer.example.com \
     -f ./artifacts/channel/${CHANNEL_NAME}.tx --outputBlock ./channel-artifacts/${CHANNEL_NAME}.block \
     --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
+
+    echo "channel created successfully"
 }
 
 
 joinChannel(){
     setGlobalsForPeer0Org1
     peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block
+    
+    setGlobalsForPeer1Org1
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block
 
+    setGlobalsForPeer2Org1
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block
+
+    setGlobalsForPeer3Org1
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block
+
+    setGlobalsForPeer4Org1
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block
+    
     setGlobalsForPeer0Org2
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block
+    
+    setGlobalsForPeer1Org2
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block
+
+    setGlobalsForPeer2Org2
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block
+
+    setGlobalsForPeer3Org2
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block
+
+    setGlobalsForPeer4Org2
     peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block
 
 }
